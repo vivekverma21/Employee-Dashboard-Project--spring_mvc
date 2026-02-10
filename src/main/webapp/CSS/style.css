@@ -1,0 +1,184 @@
+/* Container and layout */
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial;
+	background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 100%);
+	color: #222;
+	margin: 0;
+	padding: 24px;
+}
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+/* Header */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+h1 {
+	margin: 0;
+	font-size: 26px;
+}
+
+/* Buttons */
+.btn {
+	padding: 8px 12px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 600;
+	border: none;
+	display: inline-block;
+	transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(34, 34, 34, 0.08);
+}
+
+/* Specific buttons */
+.btn-add {
+	background: linear-gradient(90deg, #4CAF50, #2E8B57);
+	color: white;
+}
+
+.btn-primary {
+	background: linear-gradient(90deg, #1976D2, #125EAB);
+	color: white;
+	border: none;
+	padding: 10px 16px;
+}
+
+.btn-cancel {
+	background: transparent;
+	color: #666;
+	border: 1px solid #ddd;
+	padding: 9px 14px;
+	border-radius: 8px;
+}
+
+.btn-edit {
+	background: #fff;
+	border: 1px solid #1976D2;
+	color: #1976D2;
+	padding: 6px 10px;
+	border-radius: 6px;
+	margin-right: 6px;
+}
+
+.btn-delete {
+	background: #fff;
+	border: 1px solid #e53935;
+	color: #e53935;
+	padding: 6px 10px;
+	border-radius: 6px;
+}
+
+/* Table */
+.table-wrap {
+	overflow-x: auto;
+	background: white;
+	padding: 12px;
+	border-radius: 12px;
+	box-shadow: 0 8px 30px rgba(18, 18, 18, 0.03);
+}
+
+.employee-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 700px;
+}
+
+.employee-table thead th {
+	text-align: left;
+	padding: 12px 10px;
+	color: #444;
+	border-bottom: 2px solid #f0f0f0;
+}
+
+.employee-table tbody td {
+	padding: 12px 10px;
+	border-bottom: 1px solid #f6f6f6;
+	vertical-align: middle;
+}
+
+.employee-table tbody tr {
+	transition: background .12s ease, transform .08s ease;
+}
+
+.employee-table tbody tr:hover {
+	background: linear-gradient(90deg, rgba(240, 249, 255, 0.6),
+		rgba(255, 255, 255, 0.6));
+	transform: translateY(-3px);
+}
+/* alternating rows */
+.employee-table tbody tr:nth-child(even) {
+	background: #fbfcfe;
+}
+
+/* no data */
+.no-data {
+	text-align: center;
+	color: #888;
+	padding: 28px 0;
+}
+
+/* Form styles */
+.form-container {
+	background: white;
+	padding: 20px;
+	border-radius: 12px;
+	box-shadow: 0 8px 30px rgba(18, 18, 18, 0.03);
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.emp-form .form-row {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 12px;
+}
+
+.emp-form label {
+	font-weight: 600;
+	margin-bottom: 6px;
+}
+
+.emp-form input[type="text"], .emp-form input[type="number"], .emp-form input[type="email"]
+	{
+	padding: 10px;
+	border-radius: 8px;
+	border: 1px solid #e6e6e6;
+	outline: none;
+}
+
+.emp-form input:focus {
+	box-shadow: 0 4px 16px rgba(25, 118, 210, 0.08);
+	transform: translateY(-1px);
+}
+.tb{
+	font-size:20px;
+}
+/* readonly styling */
+input.readonly {
+	background: #f8f8f8;
+	color: #777;
+}
+
+/* small screens */
+@media ( max-width : 720px) {
+	header {
+		flex-direction: column;
+		gap: 12px;
+		align-items: flex-start;
+	}
+	.employee-table {
+		font-size: 14px;
+	}
+}
